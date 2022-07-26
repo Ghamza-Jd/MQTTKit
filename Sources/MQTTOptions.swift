@@ -9,7 +9,7 @@
 import Foundation
 
 public struct MQTTOptions {
-    var host: String!
+    public var host: String!
     private var _port: Int?
     var port: Int {
         get {
@@ -24,14 +24,14 @@ public struct MQTTOptions {
     public var password: String? = nil
     public var username: String? = nil
     public var keepAliveInterval: UInt16 = 10
-    var clientId: String = UUID().uuidString
+    public var clientId: String = UUID().uuidString
     public var useTLS = false
     public var autoReconnect: Bool = true
     public var autoReconnectTimeout: Double = 60
     var bufferSize: Int = 4096
-    var readQosClass: DispatchQoS.QoSClass = .background
+    public var readQosClass: DispatchQoS.QoSClass = .background
     
-    init(host: String, port: Int? = nil) {
+    public init(host: String, port: Int? = nil) {
         self.host = host
     }
 }
