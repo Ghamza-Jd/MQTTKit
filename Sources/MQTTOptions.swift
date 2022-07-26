@@ -19,15 +19,15 @@ public struct MQTTOptions {
             _port = newValue
         }
     }
-    var cleanSession = true
+    public var cleanSession = true
     var will: MQTTMessage?
-    var password: String? = nil
-    var username: String? = nil
-    var keepAliveInterval: UInt16 = 10
+    public var password: String? = nil
+    public var username: String? = nil
+    public var keepAliveInterval: UInt16 = 10
     var clientId: String = UUID().uuidString
-    var useTLS = false
-    var autoReconnect: Bool = true
-    var autoReconnectTimeout: Double = 60
+    public var useTLS = false
+    public var autoReconnect: Bool = true
+    public var autoReconnectTimeout: Double = 60
     var bufferSize: Int = 4096
     var readQosClass: DispatchQoS.QoSClass = .background
     
